@@ -37,7 +37,9 @@ const lerp = (a: number, b: number, n: number) => (1 - n) * a + n * b
 extend({ TextGeometry, MeshLineGeometry, MeshLineMaterial })
 
 const fontBlob = await getDefault(
-  import('src/assets/new-rodin-m.json') as Promise<{ default: Font['data'] }>,
+  import('src/assets/new-rodin-m.json') as unknown as Promise<{
+    default: Font['data']
+  }>,
 )
 const fontLoader = new FontLoader()
 
