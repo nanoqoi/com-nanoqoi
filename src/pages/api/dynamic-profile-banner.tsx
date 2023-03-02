@@ -11,11 +11,11 @@ export const config = {
 }
 
 const getRubikSemiBoldFont = fetch(
-  new URL('../../../public/fonts/Rubik-SemiBold.ttf', import.meta.url),
+  new URL('../../../public/fonts/rubik/Rubik-SemiBold.ttf', import.meta.url),
 ).then((res) => res.arrayBuffer())
 
 const getRubikMediumFont = fetch(
-  new URL('../../../public/fonts/Rubik-Medium.ttf', import.meta.url),
+  new URL('../../../public/fonts/rubik/Rubik-Medium.ttf', import.meta.url),
 ).then((res) => res.arrayBuffer())
 
 const handler = async (req: NextRequest) => {
