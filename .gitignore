@@ -50,6 +50,12 @@ next-env.d.ts
 # Generated files
 .idea/**/contentModel.xml
 
+# File-based project format
+*.iws
+
+# IntelliJ
+out/
+
 # Sensitive or high-churn files
 .idea/**/dataSources/
 .idea/**/dataSources.ids
