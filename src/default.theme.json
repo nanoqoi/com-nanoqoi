@@ -1,0 +1,11 @@
+{
+  "fps": 14,
+  "grid": {
+    "size": 9
+  },
+  "colors": {
+    "background": "#594e71",
+    "foreground": "#ffffff",
+    "accent": "#a771bf"
+  }
+}

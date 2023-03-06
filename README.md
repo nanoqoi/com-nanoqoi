@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://synqat.vercel.app/api/dynamic-profile-banner?@=Synqat" />
+  <img src="https://synqat.dev/api/dynamic-profile-banner?@=Synqat" />
   <br />
   <br />
   <br />

@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@lume/three-meshline": "^4.0.5",
     "@react-three/drei": "^9.57.0",
     "@react-three/fiber": "^8.11.5",
     "@react-three/postprocessing": "^2.7.0",

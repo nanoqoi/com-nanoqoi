@@ -1,10 +1,15 @@
 import * as THREE from 'three'
 import { ThreeElements } from '@react-three/fiber'
 import { Object3DNode, MaterialNode } from '@react-three/fiber'
-import { MeshLineGeometry, MeshLineMaterial } from 'meshline'
+import {
+  MeshLine,
+  MeshLineGeometry,
+  MeshLineMaterial,
+} from '@lume/three-meshline'
 
 declare module '@react-three/fiber' {
   interface ThreeElements {
+    meshLine: Object3DNode<MeshLine, typeof MeshLine>
     meshLineGeometry: Object3DNode<MeshLineGeometry, typeof MeshLineGeometry>
     meshLineMaterial: MaterialNode<MeshLineMaterial, typeof MeshLineMaterial>
     flickerEffect: ThreeElements['shaderMaterial'] & { color: string }

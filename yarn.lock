@@ -36,6 +36,11 @@
   resolved "https://registry.yarnpkg.com/@chevrotain/utils/-/utils-10.4.2.tgz#87735732184cc5a2f8aad2f3454082294ef3c924"
   integrity sha512-V34dacxWLwKcvcy32dx96ADJVdB7kOJLm7LyBkBQw5u5HC9WdEFw2G17zml+U3ivavGTrGPJHl8o9/UJm0PlUw==
 
+"@lume/three-meshline@^4.0.5":
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/@lume/three-meshline/-/three-meshline-4.0.5.tgz#ceeef91759b9c5dc19404f0131ff98d40933c0b2"
+  integrity sha512-1Gyl5yf9rXzwTtvOAsJg0Vc7AIOIIpf45H9+ZZDUstl/0TH5bDOefDSFC4OXQFgc7BQebBkGGzi+ffzaBgaovw==
+
 "@next/env@13.2.3":
   version "13.2.3"
   resolved "https://registry.yarnpkg.com/@next/env/-/env-13.2.3.tgz#77ca49edb3c1d7c5263bb8f2ebe686080e98279e"
