@@ -2,7 +2,6 @@ import { Column } from 'src/components/dynamic-profile-banner/Column'
 import { Text } from 'src/components/dynamic-profile-banner/Text'
 import { ImageResponse } from '@vercel/og'
 import { NextRequest } from 'next/server'
-import { APIUser } from 'discord-api-types/v10'
 import { Row } from 'src/components/dynamic-profile-banner/Row'
 
 const I_HEIGHT = 232
@@ -26,19 +25,11 @@ const fetchUserDetails = async (userDiscordId: string) => {
     throw new Error('Failed to fetch user details')
   }
 
-  return (await res.json()) as APIUser
+  return (await res.json()) as any
 }
-
-const getRubikSemiBoldFont = fetch(
-  new URL('../../../public/fonts/rubik/Rubik-SemiBold.ttf', import.meta.url),
-).then((res) => res.arrayBuffer())
 
 const getRubikMediumFont = fetch(
   new URL('../../../public/fonts/rubik/Rubik-Medium.ttf', import.meta.url),
-).then((res) => res.arrayBuffer())
-
-const getRubikRegularFont = fetch(
-  new URL('../../../public/fonts/rubik/Rubik-Regular.ttf', import.meta.url),
 ).then((res) => res.arrayBuffer())
 
 const getNewRodinFont = fetch(
@@ -49,9 +40,7 @@ const getNewRodinFont = fetch(
 ).then((res) => res.arrayBuffer())
 
 const handler = async (req: NextRequest) => {
-  const RubikSemiBoldFont = await getRubikSemiBoldFont
   const RubikMediumFont = await getRubikMediumFont
-  const RubikRegularFont = await getRubikRegularFont
   const NewRodinFont = await getNewRodinFont
 
   const query = req.nextUrl.searchParams
@@ -165,7 +154,7 @@ const handler = async (req: NextRequest) => {
           <Text
             style={{
               fontSize: '20px',
-              fontWeight: 100,
+              fontWeight: 200,
               marginLeft: '4px',
             }}
           >
@@ -203,20 +192,8 @@ const handler = async (req: NextRequest) => {
       width: I_WIDTH,
       fonts: [
         {
-          weight: 100,
-          data: RubikRegularFont,
-          style: 'normal',
-          name: 'Rubik',
-        },
-        {
           weight: 200,
           data: RubikMediumFont,
-          style: 'normal',
-          name: 'Rubik',
-        },
-        {
-          weight: 300,
-          data: RubikSemiBoldFont,
           style: 'normal',
           name: 'Rubik',
         },
