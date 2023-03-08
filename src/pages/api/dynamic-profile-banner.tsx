@@ -38,23 +38,11 @@ const handler = async (req: NextRequest) => {
           inset: 0,
           height: `${I_HEIGHT}px`,
           width: `${I_WIDTH}px`,
-          padding: '32px 0 64px 0',
+          padding: '64px 0 64px 0',
           color: 'white',
           alignItems: 'center',
         }}
       >
-        <Text
-          style={{
-            fontFamily: 'Medium',
-            fontSize: '14px',
-            color: 'rgba(255, 255, 255, 0.2)',
-            letterSpacing: '0.2em',
-            textTransform: 'uppercase',
-            marginBottom: '16px',
-          }}
-        >
-          Refresh the webpage to see what else I do
-        </Text>
         <Column
           style={{
             alignItems: 'center',
@@ -71,15 +59,21 @@ const handler = async (req: NextRequest) => {
               marginBottom: '8px',
             }}
           >
-            A versatile
-            <span
-              style={{
-                marginLeft: '8px',
-                color: ['#8070E3', '#dd4c6f', '#dd9a4c'][randomIndex],
-              }}
-            >
-              {['developer', 'designer', 'enthusiast'][randomIndex]}
-            </span>
+            {query.has('fun') ? (
+              query.get('fun')
+            ) : (
+              <>
+                A versatile
+                <span
+                  style={{
+                    marginLeft: '8px',
+                    color: ['#8070E3', '#dd4c6f', '#dd9a4c'][randomIndex],
+                  }}
+                >
+                  {['developer', 'designer', 'enthusiast'][randomIndex]}
+                </span>
+              </>
+            )}
           </Text>
           <Text
             style={{
@@ -91,7 +85,7 @@ const handler = async (req: NextRequest) => {
               textAlign: 'center',
             }}
           >
-            Synqat
+            {query.get('@')}
           </Text>
         </Column>
       </Column>
