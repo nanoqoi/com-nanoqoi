@@ -1,5 +1,7 @@
 <p align="center">
-  <img src="https://synqat.dev/api/dynamic-profile-banner?@=Synqat" />
+  <a href="https://synqat.dev/api/show-love">
+    <img src="https://synqat.dev/api/dynamic-profile-banner?id=286166184402092042" />
+  </a>
   <br />
   <br />
   <br />
