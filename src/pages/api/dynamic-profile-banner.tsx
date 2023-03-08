@@ -1,14 +1,14 @@
+import type { NextRequest } from 'next/server'
+import { ImageResponse } from '@vercel/og'
 import { Column } from 'src/components/dynamic-profile-banner/Column'
 import { Text } from 'src/components/dynamic-profile-banner/Text'
-import { ImageResponse } from '@vercel/og'
-import { NextRequest } from 'next/server'
 import { Row } from 'src/components/dynamic-profile-banner/Row'
 
 const I_HEIGHT = 232
 const I_WIDTH = 546
 
 export const config = {
-  runtime: 'experimental-edge',
+  runtime: 'edge',
 }
 
 const fetchUserDetails = async (userDiscordId: string) => {
