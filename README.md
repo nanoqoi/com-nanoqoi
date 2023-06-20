@@ -1,11 +1,11 @@
 <p align="center">
-  <a href="https://synqat.dev/api/show-love">
-    <img src="https://synqat.dev/api/dynamic-profile-banner?id=286166184402092042" />
-  </a>
-  <br />
-  <br />
-  <br />
-  <a href="https://discord.gatchi.gg" target="_blank"> 
-    <img src="https://discord.c99.nl/widget/theme-4/286166184402092042.png" />
+  <a href="https://discord.gg/borg" target="_blank"> 
+    <img src="https://discord.c99.nl/widget/theme-1/286166184402092042.png" />
   </a>
 </p>
+
+### Organizations
+More of my code and projects can be found amongst these organizations:
+- [Pixcel](https://github.com/PixcelApp)
+- [Galliary](https://github.com/Galliary)
+- [Localet](https://github.com/LocaletApp)
