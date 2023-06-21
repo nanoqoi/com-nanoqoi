@@ -155,7 +155,7 @@ export const Cursor: FC = () => {
       zIndex={9999}
       userSelect="none"
       border={`${OUTLINE_SIZE}px solid #fd41a2`}
-      transition={isClicking ? transitions.fast : transitions.medium}
+      transition={isOverriding ? transitions.medium : transitions.faster}
       left={0}
       top={0}
       shadow="0 0 8px 0 rgba(0, 0, 0, 0.25)"
@@ -181,7 +181,7 @@ export const Cursor: FC = () => {
           pos="absolute"
           bg="#fd41a2"
           boxSize={CENTER_SIZE}
-          transition={transitions.fast}
+          transition={transitions.faster}
           animate={
             isOverriding
               ? {

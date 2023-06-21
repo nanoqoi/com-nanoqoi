@@ -30,6 +30,10 @@ export const transitions = {
     ease: DEFAULT_EASING,
     duration: 0.2,
   },
+  faster: {
+    ease: DEFAULT_EASING,
+    duration: 0.1,
+  },
 } satisfies Record<string, MotionProps['transition']>
 
 export type MotionBoxProps = Omit<BoxProps, keyof MotionProps> & MotionProps
