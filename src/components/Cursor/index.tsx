@@ -63,8 +63,7 @@ export const useCursor = () => useContext(CursorContext)
 
 export function useCursorToSize<TProps extends ChakraProps>() {
   const ref = useRef<ReturnType<typeof setTimeout>>()
-  const { radius, isOverriding, setIsOverriding, pos, anchor, size } =
-    useCursor()
+  const { radius, setIsOverriding, anchor, size } = useCursor()
 
   const onMouseEnter = (useRadius: number | string = 0, e: ReactMouseEvent) => {
     const {
@@ -147,6 +146,13 @@ export const Cursor: FC = () => {
   const overrideRadius = radius.value || '4px'
   const borderRadiusOverriding = isOverriding ? overrideRadius : '0%'
 
+  const posX = isOverriding
+    ? anchor.x - size.width / 2 - OUTLINE_SIZE
+    : pos.x - size.width / 2 - OUTLINE_SIZE
+  const posY = isOverriding
+    ? anchor.y - size.height / 2 - OUTLINE_SIZE
+    : pos.y - size.height / 2 - OUTLINE_SIZE
+
   return (
     <MotionBox
       id="cursor"
@@ -154,26 +160,19 @@ export const Cursor: FC = () => {
       pointerEvents="none"
       zIndex={9999}
       userSelect="none"
-      border={`${OUTLINE_SIZE}px solid #fd41a2`}
-      transition={isOverriding ? transitions.medium : transitions.faster}
-      left={0}
       top={0}
+      left={0}
+      border={`${OUTLINE_SIZE}px solid #fd41a2`}
+      transition={isOverriding ? transitions.medium : transitions.instant}
       shadow="0 0 8px 0 rgba(0, 0, 0, 0.25)"
       animate={{
+        x: posX,
+        y: posY,
         scale: isClicking ? 1.25 : 1,
-        width: size.width + OUTLINE_SIZE * 4,
-        height: size.height + OUTLINE_SIZE * 4,
+        width: size.width + OUTLINE_SIZE * 2,
+        height: size.height + OUTLINE_SIZE * 2,
         opacity: Number(isVisible),
         borderRadius: isVisible ? borderRadiusOverriding : '99%',
-        ...(isOverriding
-          ? {
-              x: anchor.x - size.width / 2 - OUTLINE_SIZE * 2,
-              y: anchor.y - size.height / 2 - OUTLINE_SIZE * 2,
-            }
-          : {
-              x: pos.x - size.width / 2 - OUTLINE_SIZE * 2,
-              y: pos.y - size.height / 2 - OUTLINE_SIZE * 2,
-            }),
       }}
     >
       <Box boxSize="full" pos="relative">
@@ -186,13 +185,13 @@ export const Cursor: FC = () => {
             isOverriding
               ? {
                   borderRadius: '50%',
-                  x: pos.x - anchor.x + size.width / 2,
-                  y: pos.y - anchor.y + size.height / 2,
+                  x: pos.x - anchor.x + size.width / 2 - OUTLINE_SIZE,
+                  y: pos.y - anchor.y + size.height / 2 - OUTLINE_SIZE,
                 }
               : {
                   borderRadius: '0%',
-                  x: size.width / 2,
-                  y: size.height / 2,
+                  x: size.width / 2 - OUTLINE_SIZE,
+                  y: size.height / 2 - OUTLINE_SIZE,
                 }
           }
         />

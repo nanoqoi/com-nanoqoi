@@ -1,8 +1,17 @@
 import { chakra } from '@chakra-ui/react'
-import { HStack } from '@chakra-ui/layout'
+import { MotionStack, transitions } from 'src/components/Motion'
 
 export const SynqatMainText: FC = () => (
-  <HStack align="center" justify="center" spacing={4} w="full" h="163px">
+  <MotionStack
+    layoutId="synqat-main-text"
+    direction="row"
+    align="center"
+    justify="center"
+    spacing={4}
+    w="full"
+    h="163px"
+    transition={transitions.medium}
+  >
     <svg
       width="50%"
       viewBox="0 0 372 163"
@@ -26,5 +35,5 @@ export const SynqatMainText: FC = () => (
         fill="bg"
       />
     </svg>
-  </HStack>
+  </MotionStack>
 )

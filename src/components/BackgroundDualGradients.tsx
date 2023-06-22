@@ -13,14 +13,16 @@ export const BackgroundDualGradients: FC = () => (
     spacing={0}
   >
     <Box
-      boxSize="full"
+      h="100vh"
+      w="50vw"
       bgImg="linear-gradient(218.31deg, #17181B 0%, #0E0D22 100%)"
       pos="relative"
     >
       <Particles />
     </Box>
     <Box
-      boxSize="full"
+      h="100vh"
+      w="50vw"
       bgImg="linear-gradient(165.31deg, #ECBCFF 0%, #5D6DCC 100%)"
     />
   </HStack>

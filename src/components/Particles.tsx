@@ -7,9 +7,15 @@ type GetParticleLayerProps = {
   opacity: number
   size: [number, number]
   blur: number
+  speed: number
 }
 
-const getParticleLayer = ({ opacity, size, blur }: GetParticleLayerProps) =>
+const getParticleLayer = ({
+  opacity,
+  size,
+  blur,
+  speed,
+}: GetParticleLayerProps) =>
   ({
     style: {
       position: 'absolute',
@@ -23,14 +29,22 @@ const getParticleLayer = ({ opacity, size, blur }: GetParticleLayerProps) =>
       events: {
         onHover: {
           enable: true,
+          mode: 'attract',
+        },
+        onClick: {
+          enable: true,
           mode: 'repulse',
         },
-        resize: true,
       },
       modes: {
+        attract: {
+          distance: 400,
+          duration: 0.4,
+          speed: 1,
+        },
         repulse: {
-          distance: 120,
-          duration: 2,
+          distance: 800,
+          duration: 3,
         },
       },
     },
@@ -42,27 +56,30 @@ const getParticleLayer = ({ opacity, size, blur }: GetParticleLayerProps) =>
         value: opacity,
       },
       move: {
-        direction: 'none',
         enable: true,
-        outModes: {
-          default: 'out',
-        },
-        random: false,
         speed: {
-          min: 0.5,
-          max: 1,
+          min: 0.01,
+          max: speed,
         },
+        attract: {
+          enable: true,
+          rotate: {
+            x: 360,
+            y: 360,
+          },
+        },
+        collisions: true,
         straight: false,
       },
       number: {
         density: {
           enable: true,
-          area: 800,
+          area: 2000,
         },
         value: 60,
       },
       shape: {
-        type: 'square',
+        type: 'circle',
       },
       size: {
         value: {
@@ -79,16 +96,21 @@ export const Particles: FC = () => {
     await loadFull(engine)
   }, [])
 
+  const arrayLength = 4
+  const getInvertedValue = (index: number) => arrayLength - index
+
   const particleLayers = useMemo(
     () =>
-      [...new Array(4).fill(0)].map((_, index) => (
+      [...new Array(arrayLength).fill(0)].map((_, index) => (
         <TSParticles
+          key={index}
           id={`ts-particles-${index}`}
           init={particlesInit}
           options={getParticleLayer({
             opacity: index * 0.5,
-            size: [index * 2, index * 2 + 6],
-            blur: index * 8,
+            speed: index * 0.15,
+            size: [getInvertedValue(index) * 1.5, getInvertedValue(index) * 2],
+            blur: (getInvertedValue(index) - 0.15) * 3.5,
           })}
         />
       )),

@@ -10,6 +10,7 @@
     "lib": ["esnext", "dom"],
     "jsx": "preserve",
     "types": ["unplugin-fonts/client"],
+    "typeRoots": ["node", "./node_modules/@webgpu/types"],
     "sourceMap": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,

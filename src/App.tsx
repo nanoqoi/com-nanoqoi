@@ -4,6 +4,7 @@ import { AboutMePanel } from 'src/components/AboutMePanel'
 import { useMediaQuery, VStack } from '@chakra-ui/react'
 import { SynqatMainText } from 'src/components/SynqatMainText'
 import { DiscordPanel } from 'src/components/DiscordPanel'
+import { LayoutGroup } from 'framer-motion'
 
 export const App: FC = () => {
   const [cutForMobile] = useMediaQuery('(min-width: 400px)', {
@@ -11,7 +12,7 @@ export const App: FC = () => {
   })
 
   return (
-    <>
+    <LayoutGroup>
       <Box
         pos="fixed"
         top={0}
@@ -43,6 +44,6 @@ export const App: FC = () => {
           </VStack>
         </VStack>
       </Center>
-    </>
+    </LayoutGroup>
   )
 }

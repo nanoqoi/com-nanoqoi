@@ -12,7 +12,8 @@ import type { ButtonProps } from '@chakra-ui/button'
 import { Button } from '@chakra-ui/button'
 import type { ImageProps } from '@chakra-ui/image'
 import { Image } from '@chakra-ui/image'
-import { forwardRef } from '@chakra-ui/system'
+import { chakra, forwardRef } from '@chakra-ui/system'
+import type { SVGProps } from 'react'
 
 export const DEFAULT_DURATION = 0.85
 export const DEFAULT_EASING = [0.04, 0.91, 0.6, 0.99]
@@ -33,6 +34,10 @@ export const transitions = {
   faster: {
     ease: DEFAULT_EASING,
     duration: 0.1,
+  },
+  instant: {
+    ease: DEFAULT_EASING,
+    duration: 0,
   },
 } satisfies Record<string, MotionProps['transition']>
 
@@ -56,6 +61,9 @@ export const MotionButton = motion<
 export const MotionImage = motion<
   Omit<ImageProps, keyof MotionProps> & MotionProps
 >(Image as any)
+export const MotionSVG = motion<
+  Omit<SVGProps<SVGSVGElement>, keyof MotionProps> & MotionProps
+>(chakra.svg as any)
 
 export const MotionSpinner = forwardRef<MotionBoxProps, typeof MotionBox>(
   (props, ref) => (
