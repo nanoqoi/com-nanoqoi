@@ -156,14 +156,14 @@ const MyExperience: FC<{ previousIndex: number }> = ({ previousIndex }) => {
               </Text>
               <HStack spacing={0}>
                 <Link
-                  href="https://github.com/synqat"
+                  href="https://github.com/nanoqoi"
                   rel="noopener external"
                   target="_blank"
                 >
                   <IconButton
                     p={8}
                     icon={<GitHubIcon boxSize={24} />}
-                    aria-label="github.com/synqat"
+                    aria-label="github.com/nanoqoi"
                     {...cursorSizer()}
                   />
                 </Link>
@@ -198,14 +198,14 @@ const MyExperience: FC<{ previousIndex: number }> = ({ previousIndex }) => {
                 </Text>
                 <HStack spacing={0}>
                   <Link
-                    href="https://figma.com/@synqat"
+                    href="https://figma.com/@nanoqoi"
                     rel="noopener external"
                     target="_blank"
                   >
                     <IconButton
                       p={8}
                       icon={<FigmaIcon h={24} />}
-                      aria-label="figma.com/@synqat"
+                      aria-label="figma.com/@nanoqoi"
                       {...cursorSizer()}
                     />
                   </Link>
@@ -286,50 +286,50 @@ const AboutMeDisplay: FC<{ previousIndex: number }> = ({ previousIndex }) => {
         <Center>
           <HStack py={8} px={10} spacing={0}>
             <Link
-              href="https://figma.com/@synqat"
+              href="https://figma.com/@nanoqoi"
               rel="noopener external"
               target="_blank"
             >
               <IconButton
                 p={8}
                 icon={<FigmaMaterialIcon boxSize={24} />}
-                aria-label="figma.com/@synqat"
+                aria-label="figma.com/@nanoqoi"
                 {...cursorSizer()}
               />
             </Link>
             <Link
-              href="https://twitter.com/synqat_dev"
+              href="https://twitter.com/nanoqoi"
               rel="noopener external"
               target="_blank"
             >
               <IconButton
                 p={8}
                 icon={<TwitterIcon boxSize={24} />}
-                aria-label="twitter.com/synqat_dev"
+                aria-label="twitter.com/nanoqoi"
                 {...cursorSizer()}
               />
             </Link>
             <Link
-              href="https://discord.gg/borg"
+              href="https://discord.com/users/286166184402092042"
               rel="noopener external"
               target="_blank"
             >
               <IconButton
                 p={8}
                 icon={<DiscordIcon boxSize={24} />}
-                aria-label="discord.gg/borg"
+                aria-label="discord.com/users/286166184402092042"
                 {...cursorSizer()}
               />
             </Link>
             <Link
-              href="https://github.com/synqat"
+              href="https://github.com/nanoqoi"
               rel="noopener external"
               target="_blank"
             >
               <IconButton
                 p={8}
                 icon={<GitHubIcon boxSize={24} />}
-                aria-label="github.com/synqat"
+                aria-label="github.com/nanoqoi"
                 {...cursorSizer()}
               />
             </Link>

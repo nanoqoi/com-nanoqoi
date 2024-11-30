@@ -2,9 +2,9 @@ import { Box, Center } from '@chakra-ui/layout'
 import { BackgroundDualGradients } from 'src/components/BackgroundDualGradients'
 import { AboutMePanel } from 'src/components/AboutMePanel'
 import { useMediaQuery, VStack } from '@chakra-ui/react'
-import { SynqatMainText } from 'src/components/SynqatMainText'
 import { DiscordPanel } from 'src/components/DiscordPanel'
 import { LayoutGroup } from 'framer-motion'
+import { MainText } from 'src/components/MainText'
 
 export const App: FC = () => {
   const [cutForMobile] = useMediaQuery('(min-width: 400px)', {
@@ -37,7 +37,7 @@ export const App: FC = () => {
         boxSize="full"
       >
         <VStack spacing={16}>
-          <SynqatMainText />
+          <MainText />
           <VStack spacing={64}>
             <AboutMePanel />
             {cutForMobile && <DiscordPanel />}

@@ -2,7 +2,7 @@ import type { ChakraTheme } from '@chakra-ui/react'
 
 export const theme = {
   config: {
-    cssVarPrefix: 'synqat',
+    cssVarPrefix: 'nanoqoi',
     initialColorMode: 'dark',
     useSystemColorMode: false,
   },

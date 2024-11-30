@@ -23,7 +23,7 @@ export const DiscordPanel: FC = () => (
         />
         <HStack w="full" pl={128} spacing={16} color="panel">
           <Text fontSize={24} lineHeight="28px" fontWeight={700}>
-            synqat
+            nanoqoi
           </Text>
           <Text opacity={0.4} fontSize={14} lineHeight="17px" fontWeight={600}>
             any/all

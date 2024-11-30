@@ -1,9 +1,9 @@
 import { chakra } from '@chakra-ui/react'
 import { MotionStack, transitions } from 'src/components/Motion'
 
-export const SynqatMainText: FC = () => (
+export const MainText: FC = () => (
   <MotionStack
-    layoutId="synqat-main-text"
+    layoutId="nanoqoi-main-text"
     direction="row"
     align="center"
     justify="center"
