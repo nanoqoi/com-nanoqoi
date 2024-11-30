@@ -1,7 +1,7 @@
-import { HStack, Text } from '@chakra-ui/layout'
+import { HStack, Text } from '@chakra-ui/react'
 import { MotionPanel } from 'src/components/Panel'
 import { VStack } from '@chakra-ui/react'
-import { Image } from '@chakra-ui/image'
+import { Image } from '@chakra-ui/react'
 
 export const DiscordPanel: FC = () => (
   <VStack w="panel.main.width" spacing={8} align="end">

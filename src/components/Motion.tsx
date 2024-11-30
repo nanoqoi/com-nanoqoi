@@ -6,13 +6,13 @@ import type {
   FlexProps,
   StackProps,
   TextProps,
-} from '@chakra-ui/layout'
-import { Box, Center, Flex, Stack, Text } from '@chakra-ui/layout'
-import type { ButtonProps } from '@chakra-ui/button'
-import { Button } from '@chakra-ui/button'
-import type { ImageProps } from '@chakra-ui/image'
-import { Image } from '@chakra-ui/image'
-import { chakra, forwardRef } from '@chakra-ui/system'
+} from '@chakra-ui/react'
+import { Box, Center, Flex, Stack, Text } from '@chakra-ui/react'
+import type { ButtonProps } from '@chakra-ui/react'
+import { Button } from '@chakra-ui/react'
+import type { ImageProps } from '@chakra-ui/react'
+import { Image } from '@chakra-ui/react'
+import { chakra, forwardRef } from '@chakra-ui/react'
 import type { SVGProps } from 'react'
 
 export const DEFAULT_DURATION = 0.85

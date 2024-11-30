@@ -1,4 +1,4 @@
-import { Box, HStack } from '@chakra-ui/layout'
+import { Box, HStack } from '@chakra-ui/react'
 import { Particles } from 'src/components/Particles'
 
 export const BackgroundDualGradients: FC = () => (

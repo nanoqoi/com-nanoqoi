@@ -1,4 +1,4 @@
-import { ChakraProvider } from '@chakra-ui/provider'
+import { ChakraProvider } from '@chakra-ui/react'
 import { theme } from 'src/theme'
 import { CursorProvider } from 'src/components/Cursor'
 

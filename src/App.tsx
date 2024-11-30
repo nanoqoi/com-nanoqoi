@@ -1,4 +1,4 @@
-import { Box, Center } from '@chakra-ui/layout'
+import { Box, Center } from '@chakra-ui/react'
 import { BackgroundDualGradients } from 'src/components/BackgroundDualGradients'
 import { AboutMePanel } from 'src/components/AboutMePanel'
 import { useMediaQuery, VStack } from '@chakra-ui/react'

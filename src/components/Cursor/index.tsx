@@ -1,7 +1,7 @@
 import { MotionBox, transitions } from 'src/components/Motion'
 import type { MouseEventHandler, MouseEvent as ReactMouseEvent } from 'react'
 import { createContext, useContext, useEffect, useRef, useState } from 'react'
-import { Box } from '@chakra-ui/layout'
+import { Box } from '@chakra-ui/react'
 import type { ChakraProps } from '@chakra-ui/react'
 
 const OUTLINE_SIZE = 2

@@ -1,6 +1,6 @@
-import type { Omit } from '@chakra-ui/utils'
+import type { Omit } from '@chakra-ui/react'
 import type { BoxProps } from '@chakra-ui/react'
-import { Box } from '@chakra-ui/layout'
+import { Box } from '@chakra-ui/react'
 import type { MotionBoxProps } from 'src/components/Motion'
 import { MotionBox } from 'src/components/Motion'
 
