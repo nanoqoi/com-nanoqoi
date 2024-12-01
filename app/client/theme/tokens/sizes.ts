@@ -259,4 +259,7 @@ export const sizes = defineTokens.sizes({
   vh: {
     value: '100vh',
   },
+  maxContentWidth: {
+    value: '1760px',
+  },
 })

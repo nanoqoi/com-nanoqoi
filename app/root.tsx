@@ -6,25 +6,45 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useLoaderData,
 } from '@remix-run/react'
 import { FC, PropsWithChildren } from 'react'
 import { withEmotionCache } from '@emotion/react'
 import { useInjectStyles } from 'app/emotion/emotion-client'
 import { UiProvider } from 'app/client/context/UiProvider'
 import { OverlayEffects } from 'app/client/components/OverlayEffects'
+import { LoaderFunctionArgs } from '@remix-run/node'
+import i18nextServer from 'app/server/i18next.server'
+import { useTranslation } from 'react-i18next'
+import { useChangeLanguage } from 'remix-i18next/react'
+
+export async function loader({ request }: LoaderFunctionArgs) {
+  let locale = await i18nextServer.getLocale(request)
+  return { locale }
+}
+
+export let handle = {
+  i18n: 'generic',
+}
 
 export const Layout: FC<PropsWithChildren> = withEmotionCache(
   ({ children }, cache) => {
+    const { locale } = useLoaderData<typeof loader>()
+    const { i18n } = useTranslation()
+
+    useChangeLanguage(locale)
     useInjectStyles(cache)
 
     return (
-      <html lang="en" suppressHydrationWarning className="dark">
+      <html
+        lang={locale}
+        dir={i18n.dir()}
+        suppressHydrationWarning
+        className="dark"
+      >
         <head>
-          <meta charSet="utf-8 " />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, scale=1"
-          />
+          <meta charSet="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
           <Meta />
           <Links />
           <meta

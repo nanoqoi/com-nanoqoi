@@ -1,6 +1,26 @@
 import { defineTextStyles } from '@chakra-ui/react'
 
 export const textStyles = defineTextStyles({
+  header: {
+    heading: {
+      value: {
+        fontSize: '2xl',
+        fontWeight: 'bold',
+        lineHeight: 'normal',
+        letterSpacing: 'tightest',
+        textTransform: 'uppercase',
+      },
+    },
+    navigation: {
+      value: {
+        fontSize: 'xl',
+        fontWeight: 'semibold',
+        lineHeight: 'normal',
+        letterSpacing: 'wider',
+        textTransform: 'uppercase',
+      },
+    },
+  },
   '2xs': {
     value: {
       fontSize: '2xs',

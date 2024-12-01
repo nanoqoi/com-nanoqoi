@@ -25,7 +25,13 @@ export default defineConfig({
     }),
     tsconfigPaths(),
   ],
+  optimizeDeps: {
+    esbuildOptions: {
+      target: 'esnext',
+    },
+  },
   build: {
+    target: 'esnext',
     sourcemap: false,
     rollupOptions: {
       treeshake: 'recommended',

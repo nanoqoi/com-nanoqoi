@@ -369,7 +369,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.18.3":
+"@babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.18.3, @babel/runtime@npm:^7.23.2, @babel/runtime@npm:^7.25.0":
   version: 7.26.0
   resolution: "@babel/runtime@npm:7.26.0"
   dependencies:
@@ -414,7 +414,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chakra-ui/cli@npm:^3.2.0":
+"@chakra-ui/cli@npm:^3.2.2":
   version: 3.2.2
   resolution: "@chakra-ui/cli@npm:3.2.2"
   dependencies:
@@ -444,7 +444,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chakra-ui/react@npm:^3.1.2":
+"@chakra-ui/react@npm:^3.2.2":
   version: 3.2.2
   resolution: "@chakra-ui/react@npm:3.2.2"
   dependencies:
@@ -504,7 +504,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/cache@npm:^11.13.1, @emotion/cache@npm:^11.13.5":
+"@emotion/cache@npm:^11.13.5":
   version: 11.13.5
   resolution: "@emotion/cache@npm:11.13.5"
   dependencies:
@@ -540,7 +540,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/react@npm:^11.13.3":
+"@emotion/react@npm:^11.13.5":
   version: 11.13.5
   resolution: "@emotion/react@npm:11.13.5"
   dependencies:
@@ -1664,7 +1664,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@remix-run/dev@npm:^2.14.0":
+"@remix-run/dev@npm:^2.15.0":
   version: 2.15.0
   resolution: "@remix-run/dev@npm:2.15.0"
   dependencies:
@@ -1779,7 +1779,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@remix-run/react@npm:^2.14.0":
+"@remix-run/react@npm:^2.15.0":
   version: 2.15.0
   resolution: "@remix-run/react@npm:2.15.0"
   dependencies:
@@ -1806,7 +1806,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@remix-run/serve@npm:^2.14.0":
+"@remix-run/serve@npm:^2.15.0":
   version: 2.15.0
   resolution: "@remix-run/serve@npm:2.15.0"
   dependencies:
@@ -2153,7 +2153,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:^18.2.7":
+"@types/react-dom@npm:^18.3.1":
   version: 18.3.1
   resolution: "@types/react-dom@npm:18.3.1"
   dependencies:
@@ -2162,7 +2162,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:^18.2.20":
+"@types/react@npm:*, @types/react@npm:^18.3.12":
   version: 18.3.12
   resolution: "@types/react@npm:18.3.12"
   dependencies:
@@ -3757,19 +3757,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cross-env@npm:^7.0.3":
-  version: 7.0.3
-  resolution: "cross-env@npm:7.0.3"
+"cross-fetch@npm:4.0.0":
+  version: 4.0.0
+  resolution: "cross-fetch@npm:4.0.0"
   dependencies:
-    cross-spawn: "npm:^7.0.1"
-  bin:
-    cross-env: src/bin/cross-env.js
-    cross-env-shell: src/bin/cross-env-shell.js
-  checksum: 10c0/f3765c25746c69fcca369655c442c6c886e54ccf3ab8c16847d5ad0e91e2f337d36eedc6599c1227904bf2a228d721e690324446876115bc8e7b32a866735ecf
+    node-fetch: "npm:^2.6.12"
+  checksum: 10c0/386727dc4c6b044746086aced959ff21101abb85c43df5e1d151547ccb6f338f86dec3f28b9dbddfa8ff5b9ec8662ed2263ad4607a93b2dc354fb7fe3bbb898a
   languageName: node
   linkType: hard
 
-"cross-spawn@npm:^7.0.0, cross-spawn@npm:^7.0.1, cross-spawn@npm:^7.0.3":
+"cross-spawn@npm:^7.0.0, cross-spawn@npm:^7.0.3":
   version: 7.0.6
   resolution: "cross-spawn@npm:7.0.6"
   dependencies:
@@ -5022,6 +5019,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"html-parse-stringify@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "html-parse-stringify@npm:3.0.1"
+  dependencies:
+    void-elements: "npm:3.1.0"
+  checksum: 10c0/159292753d48b84d216d61121054ae5a33466b3db5b446e2ffc093ac077a411a99ce6cbe0d18e55b87cf25fa3c5a86c4d8b130b9719ec9b66623259000c72c15
+  languageName: node
+  linkType: hard
+
 "html-tokenize@npm:^2.0.0":
   version: 2.0.1
   resolution: "html-tokenize@npm:2.0.1"
@@ -5081,6 +5087,45 @@ __metadata:
   version: 2.1.0
   resolution: "human-signals@npm:2.1.0"
   checksum: 10c0/695edb3edfcfe9c8b52a76926cd31b36978782062c0ed9b1192b36bebc75c4c87c82e178dfcb0ed0fc27ca59d434198aac0bd0be18f5781ded775604db22304a
+  languageName: node
+  linkType: hard
+
+"i18next-browser-languagedetector@npm:^8.0.0":
+  version: 8.0.0
+  resolution: "i18next-browser-languagedetector@npm:8.0.0"
+  dependencies:
+    "@babel/runtime": "npm:^7.23.2"
+  checksum: 10c0/08a7c747ec18a0743b54390a0b42836d814b15fb49c92b90c259298e6a6e7e001ff9df99d0fd308283a34fceea53b4d9053aa1695a37f696bc04160017bbb524
+  languageName: node
+  linkType: hard
+
+"i18next-fs-backend@npm:^2.6.0":
+  version: 2.6.0
+  resolution: "i18next-fs-backend@npm:2.6.0"
+  checksum: 10c0/d54169d0fe757f2b0ec31ef5dcf5fe57e209a1afface07b397ec857e18a695c122aab79567d54b98e01185f6a5809cc9d881a412942fb6a06bbbde95a926690b
+  languageName: node
+  linkType: hard
+
+"i18next-http-backend@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "i18next-http-backend@npm:3.0.1"
+  dependencies:
+    cross-fetch: "npm:4.0.0"
+  checksum: 10c0/b3bc73d19a9ffd7e2c0f9f253b652b347b3d787caeecdf9e69fa865788d1e83974675ddd6673d084949126a085f0f131420fcbf7263aee7f9ca3f9bfe3d1f0d2
+  languageName: node
+  linkType: hard
+
+"i18next@npm:^24.0.2":
+  version: 24.0.2
+  resolution: "i18next@npm:24.0.2"
+  dependencies:
+    "@babel/runtime": "npm:^7.23.2"
+  peerDependencies:
+    typescript: ^5
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: 10c0/6bd2d9a8566026e1a8f97e6d797c323007ad816bf6e90f13cf0114d67908a845b88a5b9701d3d0dabffd38785a6ac145ea9d54265d8ef0f872931c7fa9579e16
   languageName: node
   linkType: hard
 
@@ -5401,10 +5446,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"isbot@npm:^4.1.0":
-  version: 4.4.0
-  resolution: "isbot@npm:4.4.0"
-  checksum: 10c0/8cccbd8151a859c4a6c46578aa25984a5cad90ff91b375ab644c20f0a2bf02defa5429739b2de94f68b045d37766837e12991d858ad7cdf5f01e0071d4342e49
+"isbot@npm:^5.1.17":
+  version: 5.1.17
+  resolution: "isbot@npm:5.1.17"
+  checksum: 10c0/b4adee17c54bee4cfca5ed9ab1b3151f4df558a1d3b37c94bbd3b7e1f7e4a5130efdc2f54bae83e6fe3371d40576dcd90cd7072823a85b9e0a517eb51e057074
   languageName: node
   linkType: hard
 
@@ -6550,6 +6595,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"node-fetch@npm:^2.6.12":
+  version: 2.7.0
+  resolution: "node-fetch@npm:2.7.0"
+  dependencies:
+    whatwg-url: "npm:^5.0.0"
+  peerDependencies:
+    encoding: ^0.1.0
+  peerDependenciesMeta:
+    encoding:
+      optional: true
+  checksum: 10c0/b55786b6028208e6fbe594ccccc213cab67a72899c9234eb59dba51062a299ea853210fcf526998eaa2867b0963ad72338824450905679ff0fa304b8c5093ae8
+  languageName: node
+  linkType: hard
+
 "node-gyp@npm:latest":
   version: 10.2.0
   resolution: "node-gyp@npm:10.2.0"
@@ -7121,7 +7180,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^3.3.3":
+"prettier@npm:^3.4.1":
   version: 3.4.1
   resolution: "prettier@npm:3.4.1"
   bin:
@@ -7283,7 +7342,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^18.2.0":
+"react-dom@npm:^18.3.1":
   version: 18.3.1
   resolution: "react-dom@npm:18.3.1"
   dependencies:
@@ -7292,6 +7351,24 @@ __metadata:
   peerDependencies:
     react: ^18.3.1
   checksum: 10c0/a752496c1941f958f2e8ac56239172296fcddce1365ce45222d04a1947e0cc5547df3e8447f855a81d6d39f008d7c32eab43db3712077f09e3f67c4874973e85
+  languageName: node
+  linkType: hard
+
+"react-i18next@npm:^15.1.3":
+  version: 15.1.3
+  resolution: "react-i18next@npm:15.1.3"
+  dependencies:
+    "@babel/runtime": "npm:^7.25.0"
+    html-parse-stringify: "npm:^3.0.1"
+  peerDependencies:
+    i18next: ">= 23.2.3"
+    react: ">= 16.8.0"
+  peerDependenciesMeta:
+    react-dom:
+      optional: true
+    react-native:
+      optional: true
+  checksum: 10c0/2f8de1757f5b4d91e034f621c0bf6422fad3cde0687d11d4fe87822db86f264c6c3512a26fafe03d91ea691b3c441ba5ca490f4e5611e147df985ee133265089
   languageName: node
   linkType: hard
 
@@ -7333,7 +7410,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:^18.2.0":
+"react@npm:^18.3.1":
   version: 18.3.1
   resolution: "react@npm:18.3.1"
   dependencies:
@@ -7457,6 +7534,18 @@ __metadata:
     mdast-util-to-hast: "npm:^12.1.0"
     unified: "npm:^10.0.0"
   checksum: 10c0/803e658c9b51a9b53ee2ada42ff82e8e570444bb97c873e0d602c2d8dcb69a774fd22bd6f26643dfd5ab4c181059ea6c9fb9a99a2d7f9665f3f11bef1a1489bd
+  languageName: node
+  linkType: hard
+
+"remix-i18next@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "remix-i18next@npm:7.0.0"
+  peerDependencies:
+    i18next: ^23.1.0
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-i18next: ^13.0.0 || ^14.0.0 || ^15.0.0
+    react-router: ^7.0.0
+  checksum: 10c0/457b195962c7aefa62bbfa1b6e86850019ce44eccc10c3e3d003544fb24695daf05daff698286eb9a64fabab99d250d31fb637d85dc456c0de24ce40292304fa
   languageName: node
   linkType: hard
 
@@ -7604,28 +7693,33 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
-    "@chakra-ui/cli": "npm:^3.2.0"
-    "@chakra-ui/react": "npm:^3.1.2"
-    "@emotion/cache": "npm:^11.13.1"
-    "@emotion/react": "npm:^11.13.3"
+    "@chakra-ui/cli": "npm:^3.2.2"
+    "@chakra-ui/react": "npm:^3.2.2"
+    "@emotion/cache": "npm:^11.13.5"
+    "@emotion/react": "npm:^11.13.5"
     "@emotion/server": "npm:^11.11.0"
-    "@remix-run/dev": "npm:^2.14.0"
+    "@remix-run/dev": "npm:^2.15.0"
     "@remix-run/node": "npm:^2.15.0"
-    "@remix-run/react": "npm:^2.14.0"
-    "@remix-run/serve": "npm:^2.14.0"
+    "@remix-run/react": "npm:^2.15.0"
+    "@remix-run/serve": "npm:^2.15.0"
     "@remix-run/v1-route-convention": "npm:^0.1.4"
-    "@types/react": "npm:^18.2.20"
-    "@types/react-dom": "npm:^18.2.7"
-    cross-env: "npm:^7.0.3"
-    isbot: "npm:^4.1.0"
+    "@types/react": "npm:^18.3.12"
+    "@types/react-dom": "npm:^18.3.1"
+    i18next: "npm:^24.0.2"
+    i18next-browser-languagedetector: "npm:^8.0.0"
+    i18next-fs-backend: "npm:^2.6.0"
+    i18next-http-backend: "npm:^3.0.1"
+    isbot: "npm:^5.1.17"
     next-themes: "npm:^0.4.3"
-    prettier: "npm:^3.3.3"
-    react: "npm:^18.2.0"
-    react-dom: "npm:^18.2.0"
+    prettier: "npm:^3.4.1"
+    react: "npm:^18.3.1"
+    react-dom: "npm:^18.3.1"
+    react-i18next: "npm:^15.1.3"
+    remix-i18next: "npm:^7.0.0"
     sass: "npm:^1.81.0"
-    typescript: "npm:^5.6.3"
-    vite: "npm:^5.1.0"
-    vite-tsconfig-paths: "npm:^4.2.1"
+    typescript: "npm:^5.7.2"
+    vite: "npm:^5.4.11"
+    vite-tsconfig-paths: "npm:^5.1.3"
   languageName: unknown
   linkType: soft
 
@@ -8240,6 +8334,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tr46@npm:~0.0.3":
+  version: 0.0.3
+  resolution: "tr46@npm:0.0.3"
+  checksum: 10c0/047cb209a6b60c742f05c9d3ace8fa510bff609995c129a37ace03476a9b12db4dbf975e74600830ef0796e18882b2381fb5fb1f6b4f96b832c374de3ab91a11
+  languageName: node
+  linkType: hard
+
 "trim-lines@npm:^3.0.0":
   version: 3.0.1
   resolution: "trim-lines@npm:3.0.1"
@@ -8310,7 +8411,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^5.6.3":
+"typescript@npm:^5.7.2":
   version: 5.7.2
   resolution: "typescript@npm:5.7.2"
   bin:
@@ -8320,7 +8421,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A^5.6.3#optional!builtin<compat/typescript>":
+"typescript@patch:typescript@npm%3A^5.7.2#optional!builtin<compat/typescript>":
   version: 5.7.2
   resolution: "typescript@patch:typescript@npm%3A5.7.2#optional!builtin<compat/typescript>::version=5.7.2&hash=cef18b"
   bin:
@@ -8614,9 +8715,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite-tsconfig-paths@npm:^4.2.1":
-  version: 4.3.2
-  resolution: "vite-tsconfig-paths@npm:4.3.2"
+"vite-tsconfig-paths@npm:^5.1.3":
+  version: 5.1.3
+  resolution: "vite-tsconfig-paths@npm:5.1.3"
   dependencies:
     debug: "npm:^4.1.1"
     globrex: "npm:^0.1.2"
@@ -8626,11 +8727,11 @@ __metadata:
   peerDependenciesMeta:
     vite:
       optional: true
-  checksum: 10c0/f390ac1d1c3992fc5ac50f9274c1090f8b55ab34a89ea88893db9a6924a3b26c9f64bc1163615150ad100749db73b6b2cf1d57f6cd60df6e762ceb5b8ad30024
+  checksum: 10c0/fb7480efa31fd50439f4a12c91bc953e5cc09d69fdc7eeb6ffff7cc796bc2c1f2c617c3abfdcbf5d7414848076cea9deb60bc002142f93b6e3131e5458760710
   languageName: node
   linkType: hard
 
-"vite@npm:^5.0.0, vite@npm:^5.0.11, vite@npm:^5.1.0":
+"vite@npm:^5.0.0, vite@npm:^5.0.11, vite@npm:^5.4.11":
   version: 5.4.11
   resolution: "vite@npm:5.4.11"
   dependencies:
@@ -8673,6 +8774,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"void-elements@npm:3.1.0":
+  version: 3.1.0
+  resolution: "void-elements@npm:3.1.0"
+  checksum: 10c0/0b8686f9f9aa44012e9bd5eabf287ae0cde409b9a2854c5a2335cb83920c957668ac5876e3f0d158dd424744ac411a7270e64128556b451ed3bec875ef18534d
+  languageName: node
+  linkType: hard
+
 "wcwidth@npm:^1.0.1":
   version: 1.0.1
   resolution: "wcwidth@npm:1.0.1"
@@ -8699,6 +8807,23 @@ __metadata:
   version: 3.3.3
   resolution: "web-streams-polyfill@npm:3.3.3"
   checksum: 10c0/64e855c47f6c8330b5436147db1c75cb7e7474d924166800e8e2aab5eb6c76aac4981a84261dd2982b3e754490900b99791c80ae1407a9fa0dcff74f82ea3a7f
+  languageName: node
+  linkType: hard
+
+"webidl-conversions@npm:^3.0.0":
+  version: 3.0.1
+  resolution: "webidl-conversions@npm:3.0.1"
+  checksum: 10c0/5612d5f3e54760a797052eb4927f0ddc01383550f542ccd33d5238cfd65aeed392a45ad38364970d0a0f4fea32e1f4d231b3d8dac4a3bdd385e5cf802ae097db
+  languageName: node
+  linkType: hard
+
+"whatwg-url@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "whatwg-url@npm:5.0.0"
+  dependencies:
+    tr46: "npm:~0.0.3"
+    webidl-conversions: "npm:^3.0.0"
+  checksum: 10c0/1588bed84d10b72d5eec1d0faa0722ba1962f1821e7539c535558fb5398d223b0c50d8acab950b8c488b4ba69043fd833cc2697056b167d8ad46fac3995a55d5
   languageName: node
   linkType: hard
 

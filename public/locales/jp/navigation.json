@@ -1,0 +1,23 @@
+{
+  "splitter": "/",
+  "about": {
+    "label": "私について",
+    "path": "/about"
+  },
+  "blog": {
+    "label": "ブログ",
+    "path": "/blog"
+  },
+  "skills": {
+    "label": "スキル",
+    "path": "/skills"
+  },
+  "projects": {
+    "label": "プロジェクト",
+    "path": "/projects"
+  },
+  "contact": {
+    "label": "接触",
+    "path": "/contact"
+  }
+}

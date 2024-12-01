@@ -1,0 +1,10 @@
+{
+  "title": {
+    "2xl": "<plain>$t(generic:name)</plain> // <secondary>$t(titles.senior)</secondary> // <primary>$t(titles.junior)</primary>",
+    "base": "<plain>$t(generic:name)</plain> <primary>//</primary>"
+  },
+  "titles": {
+    "senior": "Senior Frontend Engineer",
+    "junior": "Junior Designer"
+  }
+}

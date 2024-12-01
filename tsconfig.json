@@ -1,11 +1,13 @@
 {
   "include": [
+    "i18next-types.ts",
     "**/*.ts",
     "**/*.tsx",
     "**/.server/**/*.ts",
     "**/.server/**/*.tsx",
     "**/.client/**/*.ts",
-    "**/.client/**/*.tsx"
+    "**/.client/**/*.tsx",
+    "public/locales/**/*.json"
   ],
   "compilerOptions": {
     "lib": ["esnext", "DOM", "DOM.Iterable", "ES2022"],
@@ -24,7 +26,8 @@
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
-      "app/*": ["./app/*"]
+      "app/*": ["./app/*"],
+      "locales/*": ["./public/locales/*"],
     },
 
     // Vite takes care of building everything, not tsc.

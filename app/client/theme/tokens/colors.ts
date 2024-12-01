@@ -7,6 +7,24 @@ export const colors = defineTokens.colors({
   current: {
     value: 'currentColor',
   },
+  alt: { value: '#414160' },
+  faded: {
+    value: '#22222D',
+  },
+  primary: {
+    value: '#EF6780',
+  },
+  secondary: {
+    value: '#05866E',
+  },
+  accents: {
+    blue: {
+      value: '#677BEF',
+    },
+    yellow: {
+      value: '#EFB967',
+    },
+  },
   black: {
     value: '#141417',
   },

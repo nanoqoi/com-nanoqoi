@@ -1,5 +1,5 @@
-import { FC } from 'react'
-import { Box, BoxProps, chakra } from '@chakra-ui/react'
+import { type FC } from 'react'
+import { Box, chakra } from '@chakra-ui/react'
 
 const OverlayEffect = chakra('div', {
   base: {
