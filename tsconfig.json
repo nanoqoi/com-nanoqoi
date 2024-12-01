@@ -1,21 +1,33 @@
 {
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/.server/**/*.ts",
+    "**/.server/**/*.tsx",
+    "**/.client/**/*.ts",
+    "**/.client/**/*.tsx"
+  ],
   "compilerOptions": {
+    "lib": ["esnext", "DOM", "DOM.Iterable", "ES2022"],
+    "types": ["@remix-run/node", "vite/client"],
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "resolveJsonModule": true,
+    "target": "ESNext",
+    "strict": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
-      "src/*": ["./src/*"]
+      "app/*": ["./app/*"]
     },
-    "target": "esnext",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "lib": ["esnext", "dom"],
-    "jsx": "preserve",
-    "types": ["unplugin-fonts/client"],
-    "typeRoots": ["node", "./node_modules/@webgpu/types"],
-    "sourceMap": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "noEmit": true,
-    "verbatimModuleSyntax": true,
-    "skipLibCheck": true
+
+    // Vite takes care of building everything, not tsc.
+    "noEmit": true
   }
 }
