@@ -1,8 +1,10 @@
 {
   "include": [
-    "i18next-types.ts",
+    "globals.d.ts",
+    "i18next.d.ts",
     "**/*.ts",
     "**/*.tsx",
+    "**/*.mdx",
     "**/.server/**/*.ts",
     "**/.server/**/*.tsx",
     "**/.client/**/*.ts",

@@ -17,30 +17,35 @@ import { LoaderFunctionArgs } from '@remix-run/node'
 import i18nextServer from 'app/server/i18next.server'
 import { useTranslation } from 'react-i18next'
 import { useChangeLanguage } from 'remix-i18next/react'
+import i18nConfig from 'app/i18n.config'
 
-export async function loader({ request }: LoaderFunctionArgs) {
-  let locale = await i18nextServer.getLocale(request)
+export async function loader({ request, params }: LoaderFunctionArgs) {
+  const userLocale = await i18nextServer.getLocale(request)
+  const locale = params.lang ?? userLocale
   return { locale }
 }
 
-export let handle = {
+export const handle = {
   i18n: 'generic',
 }
 
 export const Layout: FC<PropsWithChildren> = withEmotionCache(
   ({ children }, cache) => {
-    const { locale } = useLoaderData<typeof loader>()
+    useInjectStyles(cache)
+
+    const data = useLoaderData<typeof loader>()
     const { i18n } = useTranslation()
 
+    const locale = data?.locale ?? i18nConfig.fallbackLng
+
     useChangeLanguage(locale)
-    useInjectStyles(cache)
 
     return (
       <html
         lang={locale}
         dir={i18n.dir()}
-        suppressHydrationWarning
         className="dark"
+        suppressHydrationWarning
       >
         <head>
           <meta charSet="utf-8" />
@@ -58,7 +63,7 @@ export const Layout: FC<PropsWithChildren> = withEmotionCache(
             crossOrigin=""
           />
           <link
-            href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Mochiy+Pop+One&display=swap"
             rel="stylesheet"
           />
         </head>

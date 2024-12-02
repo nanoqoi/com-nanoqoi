@@ -6,7 +6,7 @@ import { Header } from 'app/client/components/Header'
 const RootLayout: FC = () => {
   return (
     <Center boxSize="full">
-      <VStack boxSize="full" p={6} w="full" maxW="maxContentWidth">
+      <VStack boxSize="full" gap={6} p={6} w="full" maxW="maxContentWidth">
         <Header />
         <Flex as="main" boxSize="full">
           <Outlet />

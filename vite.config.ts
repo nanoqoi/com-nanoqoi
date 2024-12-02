@@ -2,12 +2,16 @@ import { vitePlugin as remix } from '@remix-run/dev'
 import { createRoutesFromFolders } from '@remix-run/v1-route-convention'
 import { defineConfig } from 'vite'
 import tsconfigPaths from 'vite-tsconfig-paths'
+import mdx from '@mdx-js/rollup'
 
 export default defineConfig({
   server: {
     port: 3000,
   },
   plugins: [
+    mdx({
+      providerImportSource: '@mdx-js/react',
+    }),
     remix({
       future: {
         v3_fetcherPersist: true,

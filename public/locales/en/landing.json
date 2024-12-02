@@ -1,3 +1,10 @@
 {
-  "hero": "Meticulously Crafting"
+  "hero": {
+    "line_1": "Meticulously",
+    "line_2": "Crafting",
+    "line_3": "<secondary>Websites</secondary> <alt>With</alt>",
+    "line_4": "<primary>Precision</primary>",
+    "line_5": "<alt>And</alt> <primary>Detail</primary>"
+  },
+  "blurb": "A full-stack software engineer with a passion for perfecting the details of his craft. Actively pursuing website design as a creative outlet and materializing concepts."
 }

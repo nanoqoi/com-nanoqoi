@@ -1,6 +1,29 @@
 import { defineTextStyles } from '@chakra-ui/react'
 
 export const textStyles = defineTextStyles({
+  blog: {
+    content: {
+      heading: {
+        value: {
+          fontSize: '6xl',
+          fontWeight: 'normal',
+          lineHeight: 'shorter',
+          letterSpacing: '3.84px',
+          textTransform: 'uppercase',
+        },
+      },
+      blurb: {
+        value: {
+          fontFamily: 'body',
+          fontSize: 'lg',
+          fontWeight: 'bold',
+          lineHeight: 'tall',
+          letterSpacing: '2.2px',
+          textTransform: 'uppercase',
+        },
+      },
+    },
+  },
   header: {
     heading: {
       value: {
@@ -16,6 +39,37 @@ export const textStyles = defineTextStyles({
         fontSize: 'xl',
         fontWeight: 'semibold',
         lineHeight: 'normal',
+        letterSpacing: 'wider',
+        textTransform: 'uppercase',
+      },
+    },
+  },
+  content: {
+    heading: {
+      value: {
+        fontSize: '8xl',
+        fontWeight: 'normal',
+        lineHeight: 'shorter',
+        letterSpacing: '3.84px',
+        textTransform: 'uppercase',
+      },
+    },
+  },
+  hero: {
+    title: {
+      value: {
+        fontSize: '6vw',
+        fontWeight: 'normal',
+        lineHeight: 'shorter',
+        letterSpacing: '5.12px',
+        textTransform: 'uppercase',
+      },
+    },
+    blurb: {
+      value: {
+        fontSize: 'xl',
+        fontWeight: 'semibold',
+        lineHeight: 'tall',
         letterSpacing: 'wider',
         textTransform: 'uppercase',
       },

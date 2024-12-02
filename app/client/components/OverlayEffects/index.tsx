@@ -36,5 +36,14 @@ export const OverlayEffects: FC = () => (
         mixBlendMode="color-dodge"
       />
     </OverlayEffect>
+    <OverlayEffect asChild>
+      <Box
+        bgImage="url(/assets/noise.gif)"
+        bgRepeat="repeat"
+        bgSize="200px"
+        opacity={0.1}
+        mixBlendMode="color-dodge"
+      />
+    </OverlayEffect>
   </>
 )

@@ -2,6 +2,7 @@ import { FC } from 'react'
 import { HStack, Text } from '@chakra-ui/react'
 import { Trans, useTranslation } from 'react-i18next'
 import { NavLink } from 'app/client/components/NavLink'
+import { HomeNavLink } from 'app/client/components/NavLink/HomeNavLink'
 
 export const Header: FC = () => {
   const [t] = useTranslation('header')
@@ -20,6 +21,7 @@ export const Header: FC = () => {
           t={t}
           i18nKey="title.2xl"
           components={{
+            home: <HomeNavLink />,
             plain: <Text as="span" />,
             primary: <Text as="span" color="primary" />,
             secondary: <Text as="span" color="secondary" />,
@@ -37,7 +39,7 @@ export const Header: FC = () => {
           t={t}
           i18nKey="title.base"
           components={{
-            plain: <Text as="span" />,
+            home: <HomeNavLink />,
             primary: <Text as="span" color="primary" />,
           }}
         />

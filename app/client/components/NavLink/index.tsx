@@ -1,8 +1,7 @@
 import { FC } from 'react'
-import { Link as RemixLink } from '@remix-run/react'
 import { useTranslation } from 'react-i18next'
 import { CustomTypeOptions } from 'i18next'
-import { Link } from '@chakra-ui/react'
+import { Link } from 'app/client/components/Link'
 
 type NavigationKeys = keyof CustomTypeOptions['resources']['navigation']
 
@@ -15,14 +14,12 @@ export const NavLink: FC<NavLinkProps> = ({ id }) => {
 
   return (
     <Link
-      asChild
+      to={nav(`${id}.path` as const)}
       _hover={{
         color: 'primary',
       }}
     >
-      <RemixLink to={nav(`${id}.path` as const)}>
-        {nav(`${id}.label` as const)}
-      </RemixLink>
+      {nav(`${id}.label` as const)}
     </Link>
   )
 }

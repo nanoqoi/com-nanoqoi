@@ -1,5 +1,9 @@
 {
   "splitter": "/",
+  "home": {
+    "label": "Home",
+    "path": "/"
+  },
   "about": {
     "label": "About me",
     "path": "/about"
