@@ -1,12 +1,13 @@
 import { RemixBrowser } from '@remix-run/react'
 import { startTransition, StrictMode } from 'react'
 import { hydrateRoot } from 'react-dom/client'
-import { ClientCacheProvider } from 'app/emotion/emotion-client'
 import i18next from 'i18next'
 import { I18nextProvider, initReactI18next } from 'react-i18next'
 import LanguageDetector from 'i18next-browser-languagedetector'
 import Backend from 'i18next-http-backend'
 import i18nConfig from 'app/i18n.config'
+import { ClientCacheProvider } from './emotion/emotion-client'
+import { UiProvider } from 'app/client/context/UiProvider'
 
 async function hydrate() {
   await i18next
@@ -26,13 +27,15 @@ async function hydrate() {
   startTransition(() => {
     hydrateRoot(
       document,
-      <StrictMode>
+      <I18nextProvider i18n={i18next}>
         <ClientCacheProvider>
-          <I18nextProvider i18n={i18next}>
-            <RemixBrowser />
-          </I18nextProvider>
+          <UiProvider>
+            <StrictMode>
+              <RemixBrowser />
+            </StrictMode>
+          </UiProvider>
         </ClientCacheProvider>
-      </StrictMode>,
+      </I18nextProvider>,
     )
   })
 }

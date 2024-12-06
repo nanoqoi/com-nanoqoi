@@ -20,6 +20,10 @@ export const loader = async ({}: LoaderFunctionArgs) => {
   return { posts }
 }
 
+export const handle = {
+  i18n: 'blog',
+}
+
 const BlogPage: FC = () => {
   const data = useLoaderData<typeof loader>()
   const [t] = useTranslation('blog')

@@ -19,6 +19,7 @@ export const OverlayEffects: FC = () => (
   <>
     <OverlayEffect asChild>
       <Box
+        data-testid="paper"
         bgImage="url(/assets/paper.png)"
         bgRepeat="no-repeat"
         bgSize="cover"
@@ -29,6 +30,7 @@ export const OverlayEffects: FC = () => (
     </OverlayEffect>
     <OverlayEffect asChild>
       <Box
+        data-testid="noise"
         bgImage="url(/assets/noise.png)"
         bgRepeat="repeat"
         bgSize="384px"

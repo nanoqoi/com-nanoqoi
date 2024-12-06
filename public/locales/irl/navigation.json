@@ -1,27 +1,27 @@
 {
   "splitter": "/",
   "home": {
-    "label": "AAAA",
+    "label": "Home",
     "path": "/"
   },
   "about": {
-    "label": "AAAA",
+    "label": "About me",
     "path": "/about"
   },
   "blog": {
-    "label": "AAAA",
+    "label": "Blog",
     "path": "/blog"
   },
   "skills": {
-    "label": "AAAA",
+    "label": "Skills",
     "path": "/skills"
   },
   "projects": {
-    "label": "AAAA",
+    "label": "Projects",
     "path": "/projects"
   },
   "contact": {
-    "label": "AAAA",
+    "label": "Contact",
     "path": "/contact"
   }
 }

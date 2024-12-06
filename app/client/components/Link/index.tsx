@@ -16,7 +16,7 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
 
     return (
       <ChakraLink asChild ref={ref} color="inherit" {...rest}>
-        <RemixLink to={locale + to} rel={rel}>
+        <RemixLink to={locale + to} rel={rel} prefetch="intent">
           {children}
         </RemixLink>
       </ChakraLink>

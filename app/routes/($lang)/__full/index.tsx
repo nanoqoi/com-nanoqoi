@@ -17,10 +17,12 @@ const components = {
   alt: <Text as="span" color="alt" />,
 }
 
+export const handle = {
+  i18n: ['landing', 'navigation', 'header'],
+}
+
 const IndexPage: FC = () => {
   const [t] = useTranslation('landing')
-  const [nav] = useTranslation('navigation')
-  const [generic] = useTranslation('generic')
 
   return (
     <Center boxSize="full">
@@ -55,7 +57,7 @@ const IndexPage: FC = () => {
                 px={6}
                 rounded="2xl"
               >
-                <Link to={nav('about.path')}>{generic('read-more')}</Link>
+                <Link to={t('read-more.path')}>{t('read-more.label')}</Link>
               </Button>
             </VStack>
           </Flex>

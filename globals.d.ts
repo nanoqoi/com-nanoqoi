@@ -4,7 +4,9 @@ declare module '*.mdx' {
   const MDXComponent: (props) => JSX.Element
   export default MDXComponent
 
-  export interface MDXCustomMetadata {
+  export type MDXCustomMetadata = {
+    visibility?: 'public' | 'unlisted'
+
     slug: string
     title: string
     blurb: string

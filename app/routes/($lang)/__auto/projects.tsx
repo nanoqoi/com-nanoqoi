@@ -3,6 +3,10 @@ import { Center } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 import { TitledContent } from 'app/client/components/TitledContent'
 
+export const handle = {
+  i18n: 'projects',
+}
+
 const ProjectsPage: FC = () => {
   const [t] = useTranslation('projects')
 

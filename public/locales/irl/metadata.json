@@ -1,0 +1,39 @@
+{
+  "titles": {
+    "home": "$t(generic:name) | Senior Frontend Engineer",
+    "about": "$t(generic:name) | About",
+    "blog": "$t(generic:name) | Blog",
+    "blog.post": "$t(generic:name) | Blog | {{title}}",
+    "contact": "$t(generic:name) | Contact",
+    "skills": "$t(generic:name) | Skills",
+    "projects": "$t(generic:name) | Projects"
+  },
+  "descriptions": {
+    "home": "$t(landing:blurb)",
+    "about": "$t(metadata:descriptions.home)",
+    "blog": "Collection of my thoughts, ideas, and more.",
+    "blog.post": "My thoughts on '{{title}}'.",
+    "contact": "Want to hire me? Let's get in touch!",
+    "skills": "Comprehensive list of everything I'm capable of to varying extents.",
+    "projects": "Showcase of my personal and professional projects from the past and present."
+  },
+  "keywords": {
+    "home": "home, landing, about, blog, contact, skills, projects",
+    "about": "about, me, bio, information, background",
+    "blog": "blog, thoughts, ideas, posts, articles",
+    "blog.post": "blog, post, thoughts, ideas, articles, {{title}}",
+    "contact": "contact, hire, email, phone, message",
+    "skills": "skills, capabilities, languages, frameworks, tools",
+    "projects": "projects, showcase, personal, professional, past, present"
+  },
+  "og": {
+    "images": {
+      "home": "/assets/meta/en/home.png",
+      "about": "/assets/meta/en/about.png",
+      "blog": "/assets/meta/en/blog.png",
+      "contact": "/assets/meta/en/contact.png",
+      "skills": "/assets/meta/en/skills.png",
+      "projects": "/assets/meta/en/projects.png"
+    }
+  }
+}

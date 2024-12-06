@@ -4,7 +4,7 @@
     "base": "<home>$t(generic:name)</home> <primary>//</primary>"
   },
   "titles": {
-    "senior": "AAAAAAAAAAAAA AAAAA AAAAAA",
-    "junior": "AAAAAAAAAAA"
+    "senior": "Senior Frontend Engineer",
+    "junior": "Junior Designer"
   }
 }

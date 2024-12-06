@@ -3,14 +3,18 @@ import { Center } from '@chakra-ui/react'
 import { TitledContent } from 'app/client/components/TitledContent'
 import { useTranslation } from 'react-i18next'
 
-const AboutPage: FC = () => {
-  const [t] = useTranslation('about')
+export const handle = {
+  i18n: 'contact',
+}
+
+const ContactPage: FC = () => {
+  const [t] = useTranslation('contact')
 
   return (
     <TitledContent title={t('heading')}>
-      <Center boxSize="full">about</Center>
+      <Center boxSize="full">contact</Center>
     </TitledContent>
   )
 }
 
-export default AboutPage
+export default ContactPage

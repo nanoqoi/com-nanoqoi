@@ -2,7 +2,7 @@ import { readdir } from 'node:fs/promises'
 import { resolve } from 'node:path'
 import type { MDXCustomMetadata } from '*.mdx'
 
-const BLOG_POSTS_BASE_PATH = 'app/routes/($lang)/blog/post'
+const BLOG_POSTS_BASE_PATH = 'app/routes/($lang)/__auto/blog/post'
 
 export const getPostByRequestUrl = async (requestUrl: string) => {
   const url = new URL(requestUrl)
@@ -43,5 +43,5 @@ export const getPostsInDirectoryRecursively = async (
     }
   }
 
-  return paths
+  return paths.filter((meta) => meta.visibility !== 'unlisted')
 }
