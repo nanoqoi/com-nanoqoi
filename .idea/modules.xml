@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/synqat.iml" filepath="$PROJECT_DIR$/.idea/synqat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/nanoqoi.iml" filepath="$PROJECT_DIR$/.idea/nanoqoi.iml" />
     </modules>
   </component>
 </project>

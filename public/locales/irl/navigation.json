@@ -1,0 +1,27 @@
+{
+  "splitter": "/",
+  "home": {
+    "label": "Home",
+    "path": "/"
+  },
+  "about": {
+    "label": "About me",
+    "path": "/about"
+  },
+  "blog": {
+    "label": "Blog",
+    "path": "/blog"
+  },
+  "skills": {
+    "label": "Skills",
+    "path": "/skills"
+  },
+  "projects": {
+    "label": "Projects",
+    "path": "/projects"
+  },
+  "contact": {
+    "label": "Contact",
+    "path": "/contact"
+  }
+}

@@ -1,21 +1,38 @@
 {
+  "include": [
+    "globals.d.ts",
+    "i18next.globals.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.mdx",
+    "**/.server/**/*.ts",
+    "**/.server/**/*.tsx",
+    "**/.client/**/*.ts",
+    "**/.client/**/*.tsx",
+    "public/locales/**/*.json"
+  ],
   "compilerOptions": {
+    "lib": ["esnext", "DOM", "DOM.Iterable", "ES2022"],
+    "types": ["@remix-run/node", "vite/client", "@vitest/browser/providers/playwright"],
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "resolveJsonModule": true,
+    "target": "ESNext",
+    "strict": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
-      "src/*": ["./src/*"]
+      "app/*": ["./app/*"],
+      "locales/*": ["./public/locales/*"],
     },
-    "target": "esnext",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "lib": ["esnext", "dom"],
-    "jsx": "preserve",
-    "types": ["unplugin-fonts/client"],
-    "typeRoots": ["node", "./node_modules/@webgpu/types"],
-    "sourceMap": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "noEmit": true,
-    "verbatimModuleSyntax": true,
-    "skipLibCheck": true
+
+    // Vite takes care of building everything, not tsc.
+    "noEmit": true
   }
 }
