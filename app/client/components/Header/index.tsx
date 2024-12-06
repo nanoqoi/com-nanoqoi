@@ -9,7 +9,7 @@ export const Header: FC = () => {
   const [nav] = useTranslation('navigation')
 
   return (
-    <HStack as="header" w="full" justify="space-between">
+    <HStack as="header" w="full" flexShrink={0} justify="space-between">
       <HStack
         textStyle="header.heading"
         display={{

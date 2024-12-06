@@ -1,5 +1,6 @@
 declare module '*.mdx' {
   import { FC, PropsWithChildren } from 'react'
+
   const MDXComponent: (props) => JSX.Element
   export default MDXComponent
 

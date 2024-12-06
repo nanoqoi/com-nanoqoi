@@ -4,6 +4,17 @@ import type { MDXCustomMetadata } from '*.mdx'
 
 const BLOG_POSTS_BASE_PATH = 'app/routes/($lang)/blog/post'
 
+export const getPostByRequestUrl = async (requestUrl: string) => {
+  const url = new URL(requestUrl)
+  const path = url.pathname.replace('/blog/post/', '')
+  const fullImportPath = `../../${BLOG_POSTS_BASE_PATH}/${path}.mdx`
+  /* @vite-ignore */
+  return (await import(fullImportPath)) as {
+    default: any
+    metadata: MDXCustomMetadata
+  }
+}
+
 export const getPostsInDirectoryRecursively = async (
   base: string = BLOG_POSTS_BASE_PATH,
 ) => {
@@ -21,6 +32,7 @@ export const getPostsInDirectoryRecursively = async (
     if (path.endsWith('.mdx')) {
       /* @vite-ignore */
       const mdx = (await import(newBase)) as {
+        default: any
         metadata: MDXCustomMetadata
       }
 

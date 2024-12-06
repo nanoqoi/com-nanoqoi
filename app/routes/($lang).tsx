@@ -5,10 +5,10 @@ import { Header } from 'app/client/components/Header'
 
 const RootLayout: FC = () => {
   return (
-    <Center boxSize="full">
-      <VStack boxSize="full" gap={6} p={6} w="full" maxW="maxContentWidth">
+    <Center w="full" minH={0} minW={0}>
+      <VStack w="full" gap={6} p={6} maxW="maxContentWidth">
         <Header />
-        <Flex as="main" boxSize="full">
+        <Flex as="main" boxSize="full" minH={0}>
           <Outlet />
         </Flex>
       </VStack>
