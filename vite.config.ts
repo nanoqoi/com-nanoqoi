@@ -51,4 +51,5 @@ export default defineConfig({
       treeshake: 'recommended',
     },
   },
+  assetsInclude: ['app/routes/**/*.mdx'],
 })
