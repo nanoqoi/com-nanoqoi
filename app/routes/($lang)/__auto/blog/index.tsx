@@ -12,12 +12,15 @@ import { TitledContent } from 'app/client/components/TitledContent'
 import { useTranslation } from 'react-i18next'
 import { LoaderFunctionArgs } from '@remix-run/node'
 import { useLoaderData } from '@remix-run/react'
-import { getPostsInDirectoryRecursively } from 'app/server/blog-posts.server'
+import { posts } from 'app/server/blog-posts.server'
 import { Link } from 'app/client/components/Link'
 
 export const loader = async ({}: LoaderFunctionArgs) => {
-  const posts = await getPostsInDirectoryRecursively()
-  return { posts }
+  return {
+    posts: posts
+      .map((post) => post.metadata)
+      .filter((meta) => meta.visibility !== 'unlisted'),
+  }
 }
 
 export const handle = {

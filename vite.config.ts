@@ -33,6 +33,7 @@ export default defineConfig({
     tsconfigPaths(),
   ],
   optimizeDeps: {
+    include: ['react/jsx-runtime'],
     esbuildOptions: {
       target: 'esnext',
     },
@@ -49,7 +50,6 @@ export default defineConfig({
     sourcemap: false,
     rollupOptions: {
       treeshake: 'recommended',
-      plugins: [mdx({ providerImportSource: '@mdx-js/react' })],
     },
   },
 })

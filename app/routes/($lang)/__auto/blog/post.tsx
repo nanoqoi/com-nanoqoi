@@ -10,7 +10,7 @@ import { components } from 'app/client/components/mdx'
 export async function loader({ request, params }: LoaderFunctionArgs) {
   const post = await getPostByRequestUrl(request.url)
   return {
-    title: post.metadata.title,
+    title: post?.metadata.title,
   }
 }
 
