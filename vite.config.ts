@@ -33,7 +33,6 @@ export default defineConfig({
     tsconfigPaths(),
   ],
   optimizeDeps: {
-    include: ['react/jsx-runtime'],
     esbuildOptions: {
       target: 'esnext',
     },
