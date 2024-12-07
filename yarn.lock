@@ -3215,7 +3215,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/mdx@npm:^2.0.0, @types/mdx@npm:^2.0.5":
+"@types/mdx@npm:^2.0.0, @types/mdx@npm:^2.0.13, @types/mdx@npm:^2.0.5":
   version: 2.0.13
   resolution: "@types/mdx@npm:2.0.13"
   checksum: 10c0/5edf1099505ac568da55f9ae8a93e7e314e8cbc13d3445d0be61b75941226b005e1390d9b95caecf5dcb00c9d1bab2f1f60f6ff9876dc091a48b547495007720
@@ -10460,6 +10460,7 @@ __metadata:
     "@storybook/react-vite": "npm:8.4.7"
     "@storybook/test": "npm:8.4.7"
     "@storybook/theming": "npm:^8.4.7"
+    "@types/mdx": "npm:^2.0.13"
     "@types/react": "npm:^18.3.12"
     "@types/react-dom": "npm:^18.3.1"
     "@vitejs/plugin-react-swc": "npm:^3.7.2"

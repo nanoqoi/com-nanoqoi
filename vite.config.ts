@@ -49,7 +49,7 @@ export default defineConfig({
     sourcemap: false,
     rollupOptions: {
       treeshake: 'recommended',
+      plugins: [mdx({ providerImportSource: '@mdx-js/react' })],
     },
   },
-  assetsInclude: ['app/routes/**/*.mdx'],
 })
