@@ -4,7 +4,7 @@ import { createInstance } from 'i18next'
 import i18nextServer from 'app/server/i18next.server'
 import { I18nextProvider, initReactI18next } from 'react-i18next'
 import Backend from 'i18next-fs-backend'
-import i18nConfig from 'app/i18n.config'
+import i18nConfig, { getResolvePath } from 'app/i18n.config'
 import { resolve } from 'node:path'
 import { createEmotion } from 'app/emotion/emotion-server'
 
@@ -31,7 +31,7 @@ export default async function handleRequest(
       ...i18nConfig,
       lng,
       ns,
-      backend: { loadPath: resolve('./public/locales/{{lng}}/{{ns}}.json') },
+      backend: { loadPath: resolve(getResolvePath()) },
     })
 
   const html = renderToString(
