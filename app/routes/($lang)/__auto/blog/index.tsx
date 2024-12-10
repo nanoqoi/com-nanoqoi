@@ -10,7 +10,7 @@ import {
 } from '@chakra-ui/react'
 import { TitledContent } from 'app/client/components/TitledContent'
 import { useTranslation } from 'react-i18next'
-import { LoaderFunctionArgs } from '@remix-run/node'
+import { LoaderFunctionArgs } from '@vercel/remix'
 import { useLoaderData } from '@remix-run/react'
 import { posts } from 'app/server/blog-posts.server'
 import { Link } from 'app/client/components/Link'

@@ -1,10 +1,10 @@
-import { AppLoadContext, EntryContext } from '@remix-run/node'
+import { AppLoadContext, EntryContext } from '@vercel/remix'
 import { RemixServer } from '@remix-run/react'
 import { createInstance } from 'i18next'
 import i18nextServer from 'app/server/i18next.server'
 import { I18nextProvider, initReactI18next } from 'react-i18next'
 import Backend from 'i18next-fs-backend'
-import i18nConfig, { getResolvePath } from 'app/i18n.config'
+import i18nConfig, { getSSRLocalePath } from 'app/i18n.config'
 import { resolve } from 'node:path'
 import { createEmotion } from 'app/emotion/emotion-server'
 
@@ -16,6 +16,8 @@ export default async function handleRequest(
   _loadContext: AppLoadContext,
 ) {
   const { renderToString, injectStyles } = createEmotion()
+
+  console.log({ resolve: resolve(getSSRLocalePath()) })
 
   const instance = createInstance()
   const forcedLocale = new URL(request.url).pathname.split('/')[1]
@@ -31,7 +33,7 @@ export default async function handleRequest(
       ...i18nConfig,
       lng,
       ns,
-      backend: { loadPath: resolve(getResolvePath()) },
+      backend: { loadPath: resolve(getSSRLocalePath()) },
     })
 
   const html = renderToString(

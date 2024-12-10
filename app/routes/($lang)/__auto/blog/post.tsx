@@ -3,7 +3,7 @@ import { FC } from 'react'
 import { MDXProvider } from '@mdx-js/react'
 import { Outlet, useLoaderData } from '@remix-run/react'
 import { Grid, GridItem, Heading, VStack } from '@chakra-ui/react'
-import { LoaderFunctionArgs } from '@remix-run/node'
+import { LoaderFunctionArgs } from '@vercel/remix'
 import { getPostByRequestUrl } from 'app/server/blog-posts.server'
 import { components } from 'app/client/components/mdx'
 

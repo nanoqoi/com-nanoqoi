@@ -13,7 +13,7 @@
   ],
   "compilerOptions": {
     "lib": ["esnext", "DOM", "DOM.Iterable", "ES2022"],
-    "types": ["mdx", "@remix-run/node", "vite/client", "@vitest/browser/providers/playwright"],
+    "types": ["mdx", "@vercel/remix", "@remix-run/node", "vite/client", "@vitest/browser/providers/playwright"],
     "isolatedModules": true,
     "esModuleInterop": true,
     "jsx": "react-jsx",
