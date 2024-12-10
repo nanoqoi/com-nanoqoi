@@ -9,8 +9,7 @@
     "typecheck": "tsc",
     "test": "vitest",
     "cui": "npx @chakra-ui/cli",
-    "cui-types": "yarn cui typegen ./app/client/theme/index.ts",
-    "postinstall": "yarn cui-types",
+    "cui:types": "yarn cui typegen ./app/client/theme/index.ts",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "update-i18n": "yarn tsx ./scripts/update-i18n.ts"

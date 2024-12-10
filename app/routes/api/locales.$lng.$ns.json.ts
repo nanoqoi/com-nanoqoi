@@ -1,4 +1,4 @@
-import { LoaderFunctionArgs } from '@vercel/remix'
+import { data, LoaderFunctionArgs } from '@vercel/remix'
 import dynamicTranslationUrls from 'app/dynamic.translations.json'
 
 export async function loader({ params }: LoaderFunctionArgs) {
@@ -11,10 +11,11 @@ export async function loader({ params }: LoaderFunctionArgs) {
 
   const translation = translations[params.ns ?? 'generic'] || {}
 
-  return Response.json(translation, {
+  return data(translation, {
     headers: {
       'Cache-Control': 'public, max-age=3600',
       'Content-Type': 'application/json',
     },
+    status: 200,
   })
 }
