@@ -23,5 +23,11 @@
   "contact": {
     "label": "Contact",
     "path": "/contact"
+  },
+  "aria-labels": {
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "twitter": "Twitter",
+    "discord": "Discord"
   }
 }

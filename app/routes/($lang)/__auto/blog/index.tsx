@@ -14,6 +14,10 @@ import { LoaderFunctionArgs } from '@vercel/remix'
 import { useLoaderData } from '@remix-run/react'
 import { posts } from 'app/server/blog-posts.server'
 import { Link } from 'app/client/components/Link'
+import {
+  getRelativeBannerSrc,
+  getRelativePostPath,
+} from 'app/client/components/mdx/utils'
 
 export const loader = async ({}: LoaderFunctionArgs) => {
   return {
@@ -55,7 +59,7 @@ const BlogPage: FC = () => {
                     rounded="1px"
                     boxSize="full"
                     objectFit="cover"
-                    src={metadata.bannerSrc}
+                    src={getRelativeBannerSrc(metadata)}
                   />
                 </AspectRatio>
                 <VStack align="start" boxSize="full" justify="space-between">

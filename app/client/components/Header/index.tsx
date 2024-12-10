@@ -3,6 +3,7 @@ import { HStack, Text } from '@chakra-ui/react'
 import { Trans, useTranslation } from 'react-i18next'
 import { NavLink } from 'app/client/components/NavLink'
 import { HomeNavLink } from 'app/client/components/NavLink/HomeNavLink'
+import { HeaderIconLinks } from 'app/client/components/Header/HeaderIconLinks'
 
 export const Header: FC = () => {
   const [t] = useTranslation('header')
@@ -55,9 +56,9 @@ export const Header: FC = () => {
       >
         <NavLink id="about" />
         <NavLink id="blog" />
-        <NavLink id="skills" />
-        <NavLink id="projects" />
-        <NavLink id="contact" />
+        {/*<NavLink id="skills" />*/}
+        {/*<NavLink id="projects" />*/}
+        <HeaderIconLinks />
       </HStack>
     </HStack>
   )

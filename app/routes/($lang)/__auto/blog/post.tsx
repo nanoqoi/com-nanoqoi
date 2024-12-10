@@ -3,14 +3,19 @@ import { FC } from 'react'
 import { MDXProvider } from '@mdx-js/react'
 import { Outlet, useLoaderData } from '@remix-run/react'
 import { Grid, GridItem, Heading, VStack } from '@chakra-ui/react'
-import { LoaderFunctionArgs } from '@vercel/remix'
+import { LoaderFunctionArgs, redirect } from '@vercel/remix'
 import { getPostByRequestUrl } from 'app/server/blog-posts.server'
 import { components } from 'app/client/components/mdx'
 
 export async function loader({ request, params }: LoaderFunctionArgs) {
   const post = await getPostByRequestUrl(request.url)
+
+  if (!post) {
+    return redirect('/404')
+  }
+
   return {
-    title: post?.metadata.title,
+    metadata: post.metadata,
   }
 }
 
@@ -25,12 +30,12 @@ const PostLayout: FC = () => {
     >
       <GridItem asChild colSpan={9} rowSpan={1}>
         <Heading as="h1" textStyle="blog.content.heading">
-          {data.title}
+          {data.metadata.title}
         </Heading>
       </GridItem>
       <GridItem asChild colSpan={6} rowSpan={1} flexShrink={0}>
         <VStack align="start" gap={8}>
-          <MDXProvider components={components}>
+          <MDXProvider components={components(data.metadata)}>
             <Outlet />
           </MDXProvider>
         </VStack>

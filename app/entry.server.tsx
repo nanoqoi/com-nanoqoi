@@ -33,7 +33,10 @@ export default async function handleRequest(
       lng,
       ns,
       backend: {
-        loadPath: `${url.origin}/api/locales/{{lng}}/{{ns}}/json`,
+        loadPath:
+          process.env.NODE_ENV === 'development'
+            ? `${url.origin}/locales/{{lng}}/{{ns}}.json`
+            : `${url.origin}/api/locales/{{lng}}/{{ns}}/json`,
       },
     })
 

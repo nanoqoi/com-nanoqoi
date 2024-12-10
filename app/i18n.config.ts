@@ -4,5 +4,4 @@ export default {
   supportedLngs: ['en', 'irl'],
   fallbackLng: 'en',
   fallbackNS: 'generic',
-  debug: true,
 } satisfies Omit<InitOptions<object>, 'react' | 'detection'>
