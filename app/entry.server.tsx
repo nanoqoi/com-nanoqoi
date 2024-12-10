@@ -7,6 +7,7 @@ import Backend from 'i18next-fs-backend'
 import i18nConfig, { getSSRLocalePath } from 'app/i18n.config'
 import { resolve } from 'node:path'
 import { createEmotion } from 'app/emotion/emotion-server'
+import { readdirSync } from 'node:fs'
 
 export default async function handleRequest(
   request: Request,
@@ -16,6 +17,10 @@ export default async function handleRequest(
   _loadContext: AppLoadContext,
 ) {
   const { renderToString, injectStyles } = createEmotion()
+
+  console.log({
+    cwd: readdirSync(resolve(process.cwd())).join(', '),
+  })
 
   const instance = createInstance()
   const forcedLocale = new URL(request.url).pathname.split('/')[1]
