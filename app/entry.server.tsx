@@ -19,7 +19,7 @@ export default async function handleRequest(
   const { renderToString, injectStyles } = createEmotion()
 
   console.log({
-    cwd: readdirSync(resolve(process.cwd(), 'build')).join(', '),
+    cwd: readdirSync(resolve(process.cwd(), 'build', 'server')).join(', '),
   })
 
   const instance = createInstance()
