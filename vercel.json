@@ -1,6 +1,6 @@
 {
   "functions": {
-    "**/*.js":  {
+    "app/**/*":  {
       "includeFiles": "public/locales/**/*.json"
     }
   }
