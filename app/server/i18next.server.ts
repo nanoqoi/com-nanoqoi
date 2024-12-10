@@ -11,7 +11,7 @@ const i18next = new RemixI18Next({
   i18next: {
     ...i18nConfig,
     backend: {
-      loadPath: resolve(getSSRLocalePath()),
+      loadPath: resolve(process.cwd(), getSSRLocalePath()),
     },
   },
   plugins: [Backend],

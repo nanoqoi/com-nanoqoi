@@ -17,8 +17,6 @@ export default async function handleRequest(
 ) {
   const { renderToString, injectStyles } = createEmotion()
 
-  console.log({ resolve: resolve(getSSRLocalePath()) })
-
   const instance = createInstance()
   const forcedLocale = new URL(request.url).pathname.split('/')[1]
   const lng = i18nConfig.supportedLngs.includes(forcedLocale)
@@ -33,7 +31,7 @@ export default async function handleRequest(
       ...i18nConfig,
       lng,
       ns,
-      backend: { loadPath: resolve(getSSRLocalePath()) },
+      backend: { loadPath: resolve(process.cwd(), getSSRLocalePath()) },
     })
 
   const html = renderToString(
