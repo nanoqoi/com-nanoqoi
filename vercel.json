@@ -1,6 +1,6 @@
 {
   "functions": {
-    "*":  {
+    "api/function.js":  {
       "includeFiles": "public/locales/**/*.json"
     }
   }
