@@ -3,9 +3,8 @@ import { RemixServer } from '@remix-run/react'
 import { createInstance } from 'i18next'
 import i18nextServer from 'app/server/i18next.server'
 import { I18nextProvider, initReactI18next } from 'react-i18next'
-import Backend from 'i18next-fs-backend'
-import i18nConfig, { getSSRLocalePath } from 'app/i18n.config'
-import { resolve } from 'node:path'
+import Backend from 'i18next-http-backend'
+import i18nConfig from 'app/i18n.config'
 import { createEmotion } from 'app/emotion/emotion-server'
 
 export default async function handleRequest(
@@ -24,6 +23,8 @@ export default async function handleRequest(
     : await i18nextServer.getLocale(request)
   const ns = i18nextServer.getRouteNamespaces(remixContext)
 
+  const url = new URL(request.url)
+
   await instance
     .use(initReactI18next)
     .use(Backend)
@@ -31,7 +32,9 @@ export default async function handleRequest(
       ...i18nConfig,
       lng,
       ns,
-      backend: { loadPath: resolve(process.cwd(), getSSRLocalePath()) },
+      backend: {
+        loadPath: `${url.origin}/api/locales/{{lng}}/{{ns}}/json`,
+      },
     })
 
   const html = renderToString(
