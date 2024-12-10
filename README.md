@@ -4,3 +4,6 @@
 
 [![Figma File](https://github.com/nanoqoi/tour/blob/main/figma-button-dark.png?raw=true)](https://www.figma.com/community/file/1448121546352137380/nanoqoi-com#gh-dark-mode-only)
 [![Figma File](https://github.com/nanoqoi/tour/blob/main/figma-button-light.png?raw=true)](https://www.figma.com/community/file/1448121546352137380/nanoqoi-com#gh-light-mode-only)
+
+> # NOTE
+> The project you can see as of right now is actually my old personal website. To see the updated code and my active work in progress, [visit this url](https://github.com/nanoqoi/com-nanoqoi/tree/staging).
