@@ -1,7 +1,12 @@
 {
-  "functions": {
-    "app/**/*":  {
-      "includeFiles": "public/locales/**/*.json"
+  "builds": [
+    {
+      "src": "public/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "public/locale/**/*",
+      "use": "@vercel/node"
     }
-  }
+  ]
 }
