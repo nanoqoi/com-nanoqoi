@@ -11,3 +11,5 @@ node_modules
 
 .yarn/cache/*
 *storybook.log
+
+.vercel
