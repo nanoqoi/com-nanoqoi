@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "*":  {
+      "includeFiles": "public/locales/**/*.json"
+    }
+  }
+}
