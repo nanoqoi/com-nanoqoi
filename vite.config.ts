@@ -14,7 +14,6 @@ export default defineConfig({
     mdx({
       providerImportSource: '@mdx-js/react',
     }),
-    vercelPreset(),
     process.env.VITEST
       ? react()
       : remix({
@@ -26,6 +25,7 @@ export default defineConfig({
             v3_lazyRouteDiscovery: true,
           },
           ignoredRouteFiles: ['**/*'],
+          presets: [vercelPreset()],
           routes: (defineRoutes) => {
             return createRoutesFromFolders(defineRoutes, {
               ignoredFilePatterns: ['**/.*', '**/*.css'],
