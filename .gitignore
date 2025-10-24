@@ -65,3 +65,5 @@ out/
 .idea/**/dynamic.xml
 .idea/**/uiDesigner.xml
 .idea/**/dbnavigator.xml
+
+.yarn/install-state.gz

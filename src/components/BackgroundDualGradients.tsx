@@ -1,5 +1,4 @@
 import { Box, HStack } from '@chakra-ui/react'
-import { Particles } from 'src/components/Particles'
 
 export const BackgroundDualGradients: FC = () => (
   <HStack
@@ -17,9 +16,7 @@ export const BackgroundDualGradients: FC = () => (
       w="50vw"
       bgImg="linear-gradient(218.31deg, #17181B 0%, #0E0D22 100%)"
       pos="relative"
-    >
-      <Particles />
-    </Box>
+    />
     <Box
       h="100vh"
       w="50vw"
